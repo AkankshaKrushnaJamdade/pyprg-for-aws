@@ -82,22 +82,18 @@ while True:
             os.system("tput setaf 10")
 
             if aws_inp==1:
-                os.system("clear")
                 aws_setup()
                 aws_key_create()
 
             elif aws_inp==2:
-                os.system("clear")
                 aws_setup()
                 instance_launch()
 
             elif aws_inp==3:
-                os.system("clear")
                 aws_setup()
                 webserver()
 
             elif aws_inp==4:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
                 os.system("aws configure")
@@ -106,7 +102,6 @@ while True:
                 os.system("aws ec2 stop-instances --instance-ids {}".format(inst_id))
 
             elif aws_inp==5:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
                 #os.system("aws configure")
@@ -115,7 +110,6 @@ while True:
                 os.system("aws ec2 terminate-instances --instance-ids {}".format(t_id))
 
             elif aws_inp==6:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
                 os.system("aws configure")
@@ -124,7 +118,6 @@ while True:
                 os.system("aws ec2 start-instances --instance-ids {}".format(st_id))
 
             elif aws_inp==7:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
                 os.system("aws configure")
@@ -134,7 +127,6 @@ while True:
                 os.system("aws s3 mb s3://{} --region {}".format(buck_name,region))
 
             elif aws_inp==8:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
                 #os.system("aws configure")
@@ -144,7 +136,6 @@ while True:
                 os.system("aws s3 cp {} s3://{}/{}".format(obj,buck_name,obj))
 
             elif aws_inp==9:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
                 #os.system("aws configure")
@@ -154,7 +145,6 @@ while True:
                 os.system("aws s3api put-object-acl --bucket {} --key {} --acl public-read".format(buck_name,obj_name))
 
             elif aws_inp==10:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
                 #os.system("aws configure")
@@ -164,7 +154,6 @@ while True:
                 os.system("aws s3 rm s3://{}/{}".format(buck_name,obj))
 
             elif aws_inp==11:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
                 #os.system("aws configure")
@@ -173,7 +162,6 @@ while True:
                 os.system("aws s3 rb s3://{}".format(del_buck_name))
         
             elif aws_inp==12:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
                 #os.system("aws configure")
@@ -185,10 +173,8 @@ while True:
 
 
             elif aws_inp==13:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
-                #os.system("aws configure")
                 v_id=input("Enter volume id:")
                 inst_id=input("Enter instance id:")
                 device=input("Enter device:")
@@ -201,23 +187,19 @@ while True:
                 os.system("tput setaf 10")
                 os.system("aws ec2 detach-volume --volume-id {}".format(vol))
             elif aws_inp==15:
-                os.system("clear")
                 os.system("tput setaf 50")
                 aws_setup()
-                #os.system("aws configure")
                 o_domain=input("Enter origin domain:")
                 os.system("tput setaf 10")
                 os.system("aws cloudfront create-distribution --origin-domain-name {}".format(o_domain))
 
             elif aws_inp==16:
-                os.system("clear")
                 os.system("tput setaf 50")
                 user_name=input("Enter user name:")
                 os.system("tput setaf 10")
                 os.system("aws iam create-user --user-name {}".format(user_name))
 
             elif aws_inp==17:
-                os.system("clear")
                 os.system("tput setaf 7")
                 break
 
